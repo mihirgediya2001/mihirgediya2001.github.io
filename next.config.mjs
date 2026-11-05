@@ -1,17 +1,18 @@
 /** @type {import('next').NextConfig} */
 const isGhPages = process.env.GITHUB_PAGES === "true";
-const repo = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "";
+const [owner, repo] = (process.env.GITHUB_REPOSITORY ?? "/").split("/");
+// User/organization root page only when repo === "<owner>.github.io". Everything
+// else is a project page served under /<repo>/.
+const isUserPage = repo === `${owner}.github.io`;
+const basePath = isGhPages && repo && !isUserPage ? `/${repo}` : "";
 
 const nextConfig = {
   reactStrictMode: true,
   output: "export",
   images: { unoptimized: true },
   trailingSlash: true,
-  // When built on GitHub Actions for a project page (user.github.io/<repo>),
-  // prefix paths with /<repo>. For a user/organization root page
-  // (<user>.github.io), leave empty.
-  basePath: isGhPages && repo && !repo.endsWith(".github.io") ? `/${repo}` : "",
-  assetPrefix: isGhPages && repo && !repo.endsWith(".github.io") ? `/${repo}/` : "",
+  basePath,
+  assetPrefix: basePath ? `${basePath}/` : "",
   env: {
     PORTFOLIO_VARIANT: process.env.PORTFOLIO_VARIANT || "ai",
   },
