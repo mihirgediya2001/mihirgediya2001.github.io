@@ -1,0 +1,132 @@
+{
+  "slug": "fullstack",
+  "name": "Mihir Gediya",
+  "roles": ["full-stack products", "Next.js & FastAPI", "end-to-end features", "product engineering"],
+  "tagline": "I ship product end-to-end — schema, API, UI, pipeline.",
+  "summary": "Full-stack engineer who enjoys owning a feature end-to-end: schema, API, UI, and the deploy pipeline. Comfortable in TypeScript/Next.js on the front and Java/Python on the back.",
+  "location": "Montreal, Canada",
+  "email": "mihirgediya23@gmail.com",
+  "socials": [
+    { "label": "GitHub", "href": "https://github.com/" },
+    { "label": "LinkedIn", "href": "https://linkedin.com/in/" },
+    { "label": "Resume", "href": "#" }
+  ],
+  "stats": [
+    { "label": "Years shipping", "value": "3+" },
+    { "label": "End-to-end features", "value": "30+" },
+    { "label": "Open to", "value": "Full-time" }
+  ],
+  "experience": [
+    {
+      "company": "Coupa Software",
+      "role": "Software Engineer",
+      "location": "Montreal, Canada",
+      "start": "Jan 2026",
+      "end": "Present",
+      "bullets": [
+        "End-to-end feature work across React UI, Java/Python APIs, and Postgres.",
+        "Shipped a workflow surface that integrated LLM suggestions behind a feature flag.",
+        "Owned the glue between backend events and the UI through typed GraphQL schemas."
+      ],
+      "stack": ["React", "Java", "Python", "GraphQL", "AWS"]
+    },
+    {
+      "company": "Ericsson",
+      "role": "Software Engineer",
+      "location": "Montreal, Canada",
+      "start": "May 2024",
+      "end": "Dec 2025",
+      "bullets": [
+        "Built operator-facing dashboards on top of Java telemetry services.",
+        "Owned deployment pipelines across Kubernetes clusters.",
+        "Introduced typed API contracts shared between UI and backend."
+      ],
+      "stack": ["Java", "React", "Kubernetes"]
+    },
+    {
+      "company": "KPIT Technologies",
+      "role": "Software Engineer",
+      "location": "Pune, India",
+      "start": "Aug 2022",
+      "end": "Apr 2024",
+      "bullets": [
+        "Full-stack feature work on an automotive data platform, Angular + Spring Boot.",
+        "Built internal tooling for data QA engineers.",
+        "Owned the component library used across 4 teams."
+      ],
+      "stack": ["Angular", "Java", "Spring Boot", "GraphQL"]
+    },
+    {
+      "company": "ISRO (SAC)",
+      "role": "Research Intern",
+      "location": "Ahmedabad, India",
+      "start": "Jan 2022",
+      "end": "Jun 2022",
+      "bullets": [
+        "Built Python tooling and a small internal viewer for imagery datasets."
+      ],
+      "stack": ["Python", "Flask"]
+    }
+  ],
+  "education": [
+    {
+      "school": "Concordia University",
+      "degree": "M.A.Sc. Software Engineering",
+      "start": "Sep 2023",
+      "end": "Dec 2025",
+      "detail": "Focus on applied software engineering, web systems, and HCI."
+    },
+    {
+      "school": "Dharmsinh Desai University",
+      "degree": "B.Tech Information Technology",
+      "start": "Aug 2018",
+      "end": "Apr 2022",
+      "detail": "Graduated with distinction."
+    }
+  ],
+  "projectCategories": ["All", "Full-Stack", "Frontend", "Backend", "Cloud"],
+  "projects": [
+    {
+      "name": "Learning Hub",
+      "tagline": "Own W3Schools-style platform",
+      "description": "Next.js UI, FastAPI backend, Postgres progress store, custom per-topic code playgrounds.",
+      "stack": ["Next.js", "FastAPI", "PostgreSQL"],
+      "categories": ["Full-Stack", "Frontend"]
+    },
+    {
+      "name": "Job Application Assistant",
+      "tagline": "Local-first FastAPI + HTMX app",
+      "description": "Private job-tracking tool with per-job folders and resume generation hooks. HTMX keeps the UI fast with almost no client JS.",
+      "stack": ["FastAPI", "HTMX", "SQLite"],
+      "categories": ["Full-Stack", "Backend"]
+    },
+    {
+      "name": "Picsy.art",
+      "tagline": "Image platform, Next.js + FastAPI",
+      "description": "Multi-tenant image search/generate app on Vercel + GCP/Porter K8s, FastAPI, OpenSearch, NeonDB, AWS SQS/Lambda/S3.",
+      "stack": ["Next.js", "FastAPI", "OpenSearch", "GCP", "AWS"],
+      "categories": ["Full-Stack", "Cloud"]
+    },
+    {
+      "name": "Portfolio v2",
+      "tagline": "This site",
+      "description": "Variant-driven Next.js portfolio: one codebase, multiple role-specific deployments. Framer Motion section transitions and filter pills.",
+      "stack": ["Next.js", "Tailwind", "Framer Motion"],
+      "categories": ["Frontend", "Full-Stack"]
+    },
+    {
+      "name": "Resume Build System",
+      "tagline": "LaTeX, chunked and scripted",
+      "description": "Section-based LaTeX resume with a Python build pipeline that assembles role-specific PDFs on demand.",
+      "stack": ["LaTeX", "Python"],
+      "categories": ["Backend"]
+    },
+    {
+      "name": "Realtime Notes",
+      "tagline": "WebSocket collaborative editor",
+      "description": "Small CRDT experiment with per-document presence and offline-first sync.",
+      "stack": ["Next.js", "Yjs", "WebSockets"],
+      "categories": ["Full-Stack", "Frontend"]
+    }
+  ]
+}

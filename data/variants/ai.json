@@ -1,0 +1,134 @@
+{
+  "slug": "ai",
+  "name": "Mihir Gediya",
+  "roles": ["LLM systems", "RAG & retrieval", "production ML", "AI platforms"],
+  "tagline": "I build retrieval, RAG, and production LLM systems that actually ship.",
+  "summary": "AI/ML engineer with 3+ years building production systems that combine retrieval, LLMs, and classic ML. Comfortable from the embedding layer up to the product surface — vector stores, RAG pipelines, evaluation harnesses, and the Python/Java services that host them.",
+  "location": "Montreal, Canada",
+  "email": "mihirgediya23@gmail.com",
+  "socials": [
+    { "label": "GitHub", "href": "https://github.com/" },
+    { "label": "LinkedIn", "href": "https://linkedin.com/in/" },
+    { "label": "Resume", "href": "#" }
+  ],
+  "stats": [
+    { "label": "Years shipping", "value": "3+" },
+    { "label": "Production systems", "value": "12+" },
+    { "label": "Open to", "value": "Full-time" }
+  ],
+  "experience": [
+    {
+      "company": "Coupa Software",
+      "role": "Software Engineer — AI Platform",
+      "location": "Montreal, Canada",
+      "start": "Jan 2026",
+      "end": "Present",
+      "bullets": [
+        "Built retrieval-augmented features over spend data using vector search and LLM re-ranking.",
+        "Designed evaluation harnesses for prompt and model changes to guard production quality.",
+        "Shipped Python services on AWS with Redis and Kafka to serve low-latency AI endpoints."
+      ],
+      "stack": ["Python", "FastAPI", "AWS", "Redis", "Kafka", "OpenSearch"]
+    },
+    {
+      "company": "Ericsson",
+      "role": "Software Engineer",
+      "location": "Montreal, Canada",
+      "start": "May 2024",
+      "end": "Dec 2025",
+      "bullets": [
+        "Built telemetry and anomaly-detection pipelines for RAN components.",
+        "Owned Java microservices and contributed to a Python ML inference layer.",
+        "Shipped observability improvements that cut on-call noise meaningfully."
+      ],
+      "stack": ["Java", "Python", "Kafka", "Kubernetes", "Prometheus"]
+    },
+    {
+      "company": "KPIT Technologies",
+      "role": "Software Engineer",
+      "location": "Pune, India",
+      "start": "Aug 2022",
+      "end": "Apr 2024",
+      "bullets": [
+        "Backend services for an automotive data platform using GraphQL and Spring Boot.",
+        "Contributed to the vehicle-event ML classification pipeline.",
+        "Owned AWS-backed ingestion handling millions of events."
+      ],
+      "stack": ["Java", "Spring Boot", "GraphQL", "AWS"]
+    },
+    {
+      "company": "ISRO (SAC)",
+      "role": "Research Intern",
+      "location": "Ahmedabad, India",
+      "start": "Jan 2022",
+      "end": "Jun 2022",
+      "bullets": [
+        "Worked on satellite image processing pipelines and ML segmentation models.",
+        "Published an internal report on hyperspectral classification results."
+      ],
+      "stack": ["Python", "PyTorch", "OpenCV"]
+    }
+  ],
+  "education": [
+    {
+      "school": "Concordia University",
+      "degree": "M.A.Sc. Software Engineering",
+      "start": "Sep 2023",
+      "end": "Dec 2025",
+      "detail": "Focus on applied ML, information retrieval, distributed systems."
+    },
+    {
+      "school": "Dharmsinh Desai University",
+      "degree": "B.Tech Information Technology",
+      "start": "Aug 2018",
+      "end": "Apr 2022",
+      "detail": "Graduated with distinction. Capstone on knowledge-graph link prediction."
+    }
+  ],
+  "projectCategories": ["All", "AI", "ML", "Full-Stack", "Backend", "Cloud"],
+  "projects": [
+    {
+      "name": "Picsy.art",
+      "tagline": "Semantic image search + generation",
+      "description": "Multi-tenant image platform on Vercel + GCP/Porter Kubernetes with FastAPI, OpenSearch vector index, NeonDB, and AWS SQS/Lambda/S3 for async workloads.",
+      "stack": ["FastAPI", "OpenSearch", "GCP", "AWS", "NeonDB", "Next.js"],
+      "categories": ["AI", "Full-Stack", "Cloud"],
+      "metric": "Production multi-tenant"
+    },
+    {
+      "name": "Link Prediction on KGs",
+      "tagline": "Graph neural networks for KG completion",
+      "description": "Trained TransE, RotatE, and GAT variants for link prediction on academic knowledge graphs. Benchmarked on FB15k-237 and WN18RR with ablations.",
+      "stack": ["PyTorch Geometric", "Python", "Neo4j"],
+      "categories": ["ML", "AI"]
+    },
+    {
+      "name": "Learning Hub",
+      "tagline": "Own W3Schools-style platform",
+      "description": "Interactive learning app with progress tracking, per-topic code playgrounds, and a curated AI/CS curriculum.",
+      "stack": ["Next.js", "FastAPI", "PostgreSQL"],
+      "categories": ["Full-Stack"]
+    },
+    {
+      "name": "Job Application Assistant",
+      "tagline": "Local-first FastAPI + HTMX tool",
+      "description": "Private job-tracking app with per-job folders, resume generation hooks, and a strict never-auto-submit rule.",
+      "stack": ["FastAPI", "HTMX", "SQLite"],
+      "categories": ["Full-Stack", "AI"]
+    },
+    {
+      "name": "RAG Evaluation Harness",
+      "tagline": "Prompt + retrieval regression testing",
+      "description": "Lightweight eval runner that scores retrieval@k, answer faithfulness, and latency across prompt versions; outputs a diffable report.",
+      "stack": ["Python", "DuckDB", "pytest"],
+      "categories": ["AI", "Backend"]
+    },
+    {
+      "name": "Vector Search Benchmark",
+      "tagline": "HNSW vs IVF vs flat on real workloads",
+      "description": "Reproducible benchmark comparing index types on recall/latency/RAM across dataset sizes. Charts the recall-latency frontier.",
+      "stack": ["Python", "FAISS", "OpenSearch", "Matplotlib"],
+      "categories": ["AI", "Backend"]
+    }
+  ]
+}

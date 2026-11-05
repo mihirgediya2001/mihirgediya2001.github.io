@@ -1,0 +1,133 @@
+{
+  "slug": "sde",
+  "name": "Mihir Gediya",
+  "roles": ["backend systems", "distributed services", "Java & Python", "AWS infrastructure"],
+  "tagline": "I design backends that stay boring under pressure.",
+  "summary": "Backend engineer with 3+ years shipping distributed services in Java and Python. Strong on API design, event-driven systems with Kafka, data modeling in PostgreSQL, and operating services on AWS and Kubernetes.",
+  "location": "Montreal, Canada",
+  "email": "mihirgediya23@gmail.com",
+  "socials": [
+    { "label": "GitHub", "href": "https://github.com/" },
+    { "label": "LinkedIn", "href": "https://linkedin.com/in/" },
+    { "label": "Resume", "href": "#" }
+  ],
+  "stats": [
+    { "label": "Years shipping", "value": "3+" },
+    { "label": "Services owned", "value": "15+" },
+    { "label": "Open to", "value": "Full-time" }
+  ],
+  "experience": [
+    {
+      "company": "Coupa Software",
+      "role": "Software Engineer",
+      "location": "Montreal, Canada",
+      "start": "Jan 2026",
+      "end": "Present",
+      "bullets": [
+        "Owned Java/Python services on AWS backing spend-management features.",
+        "Designed Kafka event flows for golden-record workflows across tenants.",
+        "Tuned Postgres and Redis hotspots cutting p95 latency on core endpoints."
+      ],
+      "stack": ["Java", "Python", "AWS", "Kafka", "PostgreSQL", "Redis"]
+    },
+    {
+      "company": "Ericsson",
+      "role": "Software Engineer",
+      "location": "Montreal, Canada",
+      "start": "May 2024",
+      "end": "Dec 2025",
+      "bullets": [
+        "Built Java microservices for RAN telemetry pipelines on Kubernetes.",
+        "Shipped observability improvements that cut on-call noise meaningfully.",
+        "Collaborated across 3 timezones on release cuts and incident reviews."
+      ],
+      "stack": ["Java", "Spring Boot", "Kafka", "Kubernetes", "Prometheus"]
+    },
+    {
+      "company": "KPIT Technologies",
+      "role": "Software Engineer",
+      "location": "Pune, India",
+      "start": "Aug 2022",
+      "end": "Apr 2024",
+      "bullets": [
+        "Spring Boot + GraphQL services for an automotive data platform.",
+        "Built an AWS-backed ingestion pipeline handling millions of vehicle events.",
+        "Owned the GraphQL schema and migrations across teams."
+      ],
+      "stack": ["Java", "Spring Boot", "GraphQL", "AWS"]
+    },
+    {
+      "company": "ISRO (SAC)",
+      "role": "Research Intern",
+      "location": "Ahmedabad, India",
+      "start": "Jan 2022",
+      "end": "Jun 2022",
+      "bullets": [
+        "Built Python processing pipelines for satellite imagery datasets.",
+        "Automated validation checks that previously ran by hand."
+      ],
+      "stack": ["Python", "NumPy", "OpenCV"]
+    }
+  ],
+  "education": [
+    {
+      "school": "Concordia University",
+      "degree": "M.A.Sc. Software Engineering",
+      "start": "Sep 2023",
+      "end": "Dec 2025",
+      "detail": "Focus on distributed systems, databases, and systems design."
+    },
+    {
+      "school": "Dharmsinh Desai University",
+      "degree": "B.Tech Information Technology",
+      "start": "Aug 2018",
+      "end": "Apr 2022",
+      "detail": "Graduated with distinction."
+    }
+  ],
+  "projectCategories": ["All", "Backend", "Distributed", "Full-Stack", "Cloud"],
+  "projects": [
+    {
+      "name": "Job Application Assistant",
+      "tagline": "Local-first FastAPI + HTMX app",
+      "description": "Private job-tracking tool with per-job folders, resume generation hooks, and a strict never-auto-submit rule.",
+      "stack": ["FastAPI", "HTMX", "SQLite"],
+      "categories": ["Backend", "Full-Stack"]
+    },
+    {
+      "name": "Picsy.art",
+      "tagline": "Multi-tenant image platform",
+      "description": "FastAPI backend on GCP/Porter Kubernetes with OpenSearch vector index, NeonDB, and AWS SQS/Lambda/S3 for async workloads.",
+      "stack": ["FastAPI", "OpenSearch", "GCP", "AWS", "NeonDB"],
+      "categories": ["Backend", "Cloud", "Full-Stack"]
+    },
+    {
+      "name": "Learning Hub",
+      "tagline": "Own W3Schools-style platform",
+      "description": "Interactive learning app with progress tracking and curriculum metadata.",
+      "stack": ["Next.js", "FastAPI", "PostgreSQL"],
+      "categories": ["Full-Stack"]
+    },
+    {
+      "name": "Event Bus Playground",
+      "tagline": "Toy Kafka-like broker in Go",
+      "description": "Single-partition, single-leader broker with acks and consumer groups; built to internalize replication tradeoffs.",
+      "stack": ["Go", "gRPC"],
+      "categories": ["Backend", "Distributed"]
+    },
+    {
+      "name": "Rate-Limiter Lab",
+      "tagline": "Token bucket vs sliding window",
+      "description": "Redis-backed rate limiter with benchmarks across algorithms and multi-region write patterns.",
+      "stack": ["Python", "Redis"],
+      "categories": ["Backend", "Distributed"]
+    },
+    {
+      "name": "Golden Record Dedup",
+      "tagline": "Fuzzy matching + merge rules",
+      "description": "Record deduplication service with pluggable blocking and scoring; outputs an auditable merge log.",
+      "stack": ["Python", "PostgreSQL"],
+      "categories": ["Backend"]
+    }
+  ]
+}
