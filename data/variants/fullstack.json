@@ -81,7 +81,7 @@
       "degree": "B.Tech Information Technology",
       "start": "Aug 2018",
       "end": "Apr 2022",
-      "detail": "Graduated with distinction."
+      "detail": "Graduated with distinction. Capstone on GPI."
     }
   ],
   "projectCategories": ["All", "Full-Stack", "Frontend", "Backend", "Cloud"],
@@ -94,11 +94,25 @@
       "categories": ["Full-Stack", "Frontend"]
     },
     {
-      "name": "Job Application Assistant",
-      "tagline": "Local-first FastAPI + HTMX app",
-      "description": "Private job-tracking tool with per-job folders and resume generation hooks. HTMX keeps the UI fast with almost no client JS.",
-      "stack": ["FastAPI", "HTMX", "SQLite"],
+      "name": "Warzone",
+      "tagline": "Risk-style strategy game",
+      "description": "Multi-iteration Java implementation of a Risk-inspired game with Command, Observer, Strategy, and State patterns. Single-player, tournament mode, and map editor.",
+      "stack": ["Java", "Swing", "JUnit"],
       "categories": ["Full-Stack", "Backend"]
+    },
+    {
+      "name": "Facial Image Analysis",
+      "tagline": "Face detection + attribute classification",
+      "description": "Pipeline for face detection, emotion classification, and demographic estimation combining OpenCV with deep-learning models. Partner project at DDU.",
+      "stack": ["Python", "OpenCV", "PyTorch"],
+      "categories": ["Full-Stack", "Backend"]
+    },
+    {
+      "name": "Minimum Cost Flow",
+      "tagline": "Network flow algorithms",
+      "description": "Successive shortest path and cycle-canceling implementations for min-cost flow, benchmarked on transportation networks of increasing size.",
+      "stack": ["C++", "Python"],
+      "categories": ["Backend"]
     },
     {
       "name": "Picsy.art",

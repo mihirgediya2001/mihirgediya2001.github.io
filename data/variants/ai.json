@@ -13,7 +13,6 @@
   ],
   "stats": [
     { "label": "Years shipping", "value": "3+" },
-    { "label": "Production systems", "value": "12+" },
     { "label": "Open to", "value": "Full-time" }
   ],
   "experience": [
@@ -82,7 +81,7 @@
       "degree": "B.Tech Information Technology",
       "start": "Aug 2018",
       "end": "Apr 2022",
-      "detail": "Graduated with distinction. Capstone on knowledge-graph link prediction."
+      "detail": "Graduated with distinction. Capstone on GPI."
     }
   ],
   "projectCategories": ["All", "AI", "ML", "Full-Stack", "Backend", "Cloud"],
@@ -110,11 +109,25 @@
       "categories": ["Full-Stack"]
     },
     {
-      "name": "Job Application Assistant",
-      "tagline": "Local-first FastAPI + HTMX tool",
-      "description": "Private job-tracking app with per-job folders, resume generation hooks, and a strict never-auto-submit rule.",
-      "stack": ["FastAPI", "HTMX", "SQLite"],
-      "categories": ["Full-Stack", "AI"]
+      "name": "Facial Image Analysis",
+      "tagline": "Face detection + attribute classification",
+      "description": "Pipeline for face detection, emotion classification, and demographic estimation combining OpenCV with deep-learning models. Partner project at DDU.",
+      "stack": ["Python", "OpenCV", "PyTorch"],
+      "categories": ["ML", "AI"]
+    },
+    {
+      "name": "Warzone",
+      "tagline": "Risk-style strategy game",
+      "description": "Multi-iteration Java implementation of a Risk-inspired game with Command, Observer, Strategy, and State patterns. Single-player, tournament mode, and map editor.",
+      "stack": ["Java", "Swing", "JUnit"],
+      "categories": ["Full-Stack", "Backend"]
+    },
+    {
+      "name": "Minimum Cost Flow",
+      "tagline": "Network flow algorithms",
+      "description": "Successive shortest path and cycle-canceling implementations for min-cost flow, benchmarked on transportation networks of increasing size.",
+      "stack": ["C++", "Python"],
+      "categories": ["Backend"]
     },
     {
       "name": "RAG Evaluation Harness",
