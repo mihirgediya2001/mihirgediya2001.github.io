@@ -48,6 +48,16 @@ export default function Education({ v, isActive }: { v: Variant; isActive: boole
             {ed.detail && (
               <p className="mt-4 text-sm leading-relaxed text-[var(--fg-dim)]/90">{ed.detail}</p>
             )}
+            {ed.courses && ed.courses.length > 0 && (
+              <>
+                <div className="mt-5 text-[10px] uppercase tracking-widest muted">Key coursework</div>
+                <div className="mt-2 flex flex-wrap gap-1.5">
+                  {ed.courses.map((c) => (
+                    <span key={c} className="tag">{c}</span>
+                  ))}
+                </div>
+              </>
+            )}
           </motion.div>
         ))}
       </div>

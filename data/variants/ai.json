@@ -71,17 +71,33 @@
   "education": [
     {
       "school": "Concordia University",
-      "degree": "M.A.Sc. Software Engineering",
+      "degree": "Master of Applied Computer Science",
       "start": "Sep 2023",
       "end": "Dec 2025",
-      "detail": "CGPA 3.92/4.3. Focus on applied ML, information retrieval, distributed systems."
+      "detail": "CGPA 3.92/4.3. Focus on applied ML, information retrieval, distributed systems.",
+      "courses": [
+        "Applied Artificial Intelligence",
+        "Intelligent Systems",
+        "Algorithm Design Techniques",
+        "Advanced Database Technology",
+        "Distributed System Design",
+        "Program & Problem Solving"
+      ]
     },
     {
       "school": "Dharmsinh Desai University",
       "degree": "B.Tech Information Technology",
       "start": "Aug 2018",
       "end": "Apr 2022",
-      "detail": "First Class with Distinction (CPI 8.87/10). Capstone on GPI."
+      "detail": "First Class with Distinction (CPI 8.87/10). Capstone on GPI.",
+      "courses": [
+        "Data Analysis & Info Extraction",
+        "Knowledge Systems",
+        "Design & Analysis of Algorithms",
+        "Data Structures & Algorithms",
+        "Distributed Computing",
+        "Core Java Technology"
+      ]
     }
   ],
   "projectCategories": ["All", "AI", "ML", "Full-Stack", "Backend", "Cloud"],

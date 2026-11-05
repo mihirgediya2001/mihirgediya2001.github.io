@@ -71,17 +71,33 @@
   "education": [
     {
       "school": "Concordia University",
-      "degree": "M.A.Sc. Software Engineering",
+      "degree": "Master of Applied Computer Science",
       "start": "Sep 2023",
       "end": "Dec 2025",
-      "detail": "CGPA 3.92/4.3. Focus on applied software engineering, web systems, and HCI."
+      "detail": "CGPA 3.92/4.3. Focus on applied software engineering, web systems, and HCI.",
+      "courses": [
+        "Advanced Programming Practices",
+        "Software Comprehension & Maintenance",
+        "Advanced Database Technology",
+        "Software Project Management",
+        "Computer Networks & Protocols",
+        "Distributed System Design"
+      ]
     },
     {
       "school": "Dharmsinh Desai University",
       "degree": "B.Tech Information Technology",
       "start": "Aug 2018",
       "end": "Apr 2022",
-      "detail": "First Class with Distinction (CPI 8.87/10). Capstone on GPI."
+      "detail": "First Class with Distinction (CPI 8.87/10). Capstone on GPI.",
+      "courses": [
+        "Web Technology",
+        "Advanced Java Technology",
+        "Design Patterns & App Frameworks",
+        "Database Management Systems",
+        "Software Engineering",
+        "Object Oriented Programming"
+      ]
     }
   ],
   "projectCategories": ["All", "Full-Stack", "Frontend", "Backend", "Cloud"],

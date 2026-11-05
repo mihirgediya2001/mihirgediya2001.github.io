@@ -28,6 +28,7 @@ export type Education = {
   start: string;
   end: string;
   detail?: string;
+  courses?: string[];
 };
 
 export type Variant = {
