@@ -9,6 +9,7 @@ import Contact from "./sections/Contact";
 import SectionNav from "./SectionNav";
 import NextButton from "./NextButton";
 import ScrollProgress from "./ScrollProgress";
+import SectionTransition from "./SectionTransition";
 
 const SECTIONS = [
   { id: "intro", label: "Intro" },
@@ -78,6 +79,7 @@ export default function Portfolio({ v }: { v: Variant }) {
       <section id="projects" className="snap-section"><Projects v={v} isActive={active === 3} /></section>
       <section id="contact" className="snap-section"><Contact v={v} isActive={active === 4} /></section>
 
+      <SectionTransition active={active} labels={SECTIONS.map((s) => s.label)} />
       <SectionNav sections={SECTIONS} active={active} onJump={scrollTo} />
       <NextButton
         label={active < SECTIONS.length - 1 ? `Next · ${SECTIONS[active + 1].label}` : "Back to top"}

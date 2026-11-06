@@ -304,31 +304,17 @@ body {
 .cursor-blob {
   position: fixed;
   top: 0; left: 0;
-  width: 320px; height: 320px;
+  width: 380px; height: 380px;
   border-radius: 999px;
   pointer-events: none;
   z-index: 2;
-  background: radial-gradient(circle, rgba(190,242,100,0.28), rgba(190,242,100,0.05) 55%, transparent 70%);
+  background: radial-gradient(circle, rgba(190,242,100,0.35), rgba(190,242,100,0.08) 50%, transparent 72%);
   mix-blend-mode: screen;
-  filter: blur(12px);
+  filter: blur(14px);
   will-change: transform;
   transition: opacity .3s;
 }
 @media (max-width: 768px) { .cursor-blob { display: none; } }
-@media (hover: none) { .cursor-blob { display: none; } }
-
-/* SplitText — mask + translateY lines */
-.split-mask {
-  display: inline-block;
-  overflow: hidden;
-  vertical-align: bottom;
-  line-height: 1.0;
-  padding-bottom: 0.08em;
-}
-.split-inner {
-  display: inline-block;
-  will-change: transform;
-}
 
 /* Marquee strip — scroll-velocity reactive */
 .marquee {

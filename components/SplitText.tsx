@@ -38,21 +38,39 @@ export default function SplitText({
     );
   }
 
+  const container = {
+    hidden: {},
+    show: { transition: { staggerChildren: stagger, delayChildren: delay } },
+  };
+  const item = {
+    hidden: { y: "0.6em", opacity: 0, filter: "blur(10px)" },
+    show: {
+      y: 0,
+      opacity: 1,
+      filter: "blur(0px)",
+      transition: { duration: 0.75, ease },
+    },
+  };
+
   return (
-    <Tag className={className} aria-label={text}>
+    <Tag
+      className={className}
+      variants={container}
+      initial="hidden"
+      animate={show ? "show" : "hidden"}
+      aria-label={text}
+    >
       {tokens.map((tok, i) => {
         if (/^\s+$/.test(tok)) return <span key={i}>{tok}</span>;
         return (
-          <span key={i} className="split-mask" aria-hidden>
-            <motion.span
-              className="split-inner"
-              initial={{ y: "110%" }}
-              animate={show ? { y: "0%" } : { y: "110%" }}
-              transition={{ duration: 0.75, delay: delay + i * stagger, ease }}
-            >
-              {tok}
-            </motion.span>
-          </span>
+          <motion.span
+            key={i}
+            variants={item}
+            style={{ display: "inline-block", willChange: "transform, opacity, filter" }}
+            aria-hidden
+          >
+            {tok}
+          </motion.span>
         );
       })}
       {trailing}
