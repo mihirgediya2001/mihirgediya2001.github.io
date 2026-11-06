@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { getVariant } from "@/lib/variant";
 import CursorBlob from "@/components/CursorBlob";
+import { RippleFilterDefs } from "@/components/Ripple";
 
 export function generateMetadata(): Metadata {
   const v = getVariant();
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen">
         <div className="ambient" aria-hidden />
         <CursorBlob />
+        <RippleFilterDefs />
         {children}
       </body>
     </html>
