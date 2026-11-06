@@ -2,6 +2,9 @@
 import { motion } from "framer-motion";
 import type { Variant } from "@/lib/variant";
 import { useShown } from "./useShown";
+import SplitText from "../SplitText";
+import MagneticButton from "../MagneticButton";
+import Marquee from "../Marquee";
 
 const ease = [0.2, 0.8, 0.2, 1] as const;
 
@@ -18,15 +21,15 @@ export default function Contact({ v, isActive }: { v: Variant; isActive: boolean
         05 / Contact
       </motion.div>
 
-      <motion.h2
-        initial={{ opacity: 0, y: 24 }}
-        animate={show ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
-        transition={{ duration: 0.75, delay: 0.08, ease }}
+      <SplitText
+        text="Let's build something together."
+        as="h2"
+        by="word"
+        stagger={0.1}
+        delay={0.1}
+        show={show}
         className="display mt-4 text-5xl sm:text-7xl md:text-8xl"
-      >
-        Let&apos;s build
-        <br />something together.
-      </motion.h2>
+      />
 
       <motion.p
         initial={{ opacity: 0, y: 20 }}
@@ -37,30 +40,35 @@ export default function Contact({ v, isActive }: { v: Variant; isActive: boolean
         I&apos;m in {v.location} and open to full-time roles. Fastest way to reach me is email, I reply within a day.
       </motion.p>
 
-      <motion.a
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={show ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{ duration: 0.6, delay: 0.4, ease }}
-        href={`mailto:${v.email}`}
-        className="group mt-10 inline-flex items-center gap-4 btn-primary pr-6 py-4"
+        transition={{ duration: 0.6, delay: 0.5, ease }}
+        className="mt-10"
       >
-        <span className="text-xs uppercase tracking-widest opacity-70">Email</span>
-        <span className="text-base sm:text-lg font-semibold">{v.email}</span>
-        <span className="text-lg group-hover:translate-x-1 transition-transform">→</span>
-      </motion.a>
+        <MagneticButton href={`mailto:${v.email}`} className="group inline-flex items-center gap-4 btn-primary pr-6 py-4">
+          <span className="text-xs uppercase tracking-widest opacity-70">Email</span>
+          <span className="text-base sm:text-lg font-semibold">{v.email}</span>
+          <span className="text-lg">→</span>
+        </MagneticButton>
+      </motion.div>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={show ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{ duration: 0.6, delay: 0.55, ease }}
+        transition={{ duration: 0.6, delay: 0.65, ease }}
         className="mt-8 flex flex-wrap gap-3"
       >
         {v.socials.map((s) => (
-          <a key={s.label} href={s.href} className="btn-ghost">
+          <MagneticButton key={s.label} href={s.href} className="btn-ghost" strength={0.25}>
             {s.label} <span aria-hidden>↗</span>
-          </a>
+          </MagneticButton>
         ))}
       </motion.div>
+
+      <div className="mt-14 -mx-[5vw]">
+        <Marquee items={["Available for hire", "Full-stack", "AI / ML", "Python · Java · TypeScript", v.location, "Open to relocate"]} />
+      </div>
 
       <div className="mt-16 pt-6 border-t border-[var(--line)] flex flex-wrap items-center justify-between gap-2 text-xs muted">
         <span>© {new Date().getFullYear()} {v.name}</span>

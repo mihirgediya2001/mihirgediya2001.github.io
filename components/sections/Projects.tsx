@@ -4,6 +4,7 @@ import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 import type { Variant } from "@/lib/variant";
 import { useShown } from "./useShown";
 import Tilt from "../Tilt";
+import SplitText from "../SplitText";
 
 const ease = [0.2, 0.8, 0.2, 1] as const;
 
@@ -26,14 +27,15 @@ export default function Projects({ v, isActive }: { v: Variant; isActive: boolea
       >
         04 / Projects
       </motion.div>
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        animate={show ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{ duration: 0.65, delay: 0.08, ease }}
+      <SplitText
+        text="Things I've built."
+        as="h2"
+        by="word"
+        stagger={0.08}
+        delay={0.1}
+        show={show}
         className="display mt-3 text-4xl md:text-6xl"
-      >
-        Things I&apos;ve built.
-      </motion.h2>
+      />
 
       <motion.div
         initial={{ opacity: 0, y: 12 }}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { getVariant } from "@/lib/variant";
+import CursorBlob from "@/components/CursorBlob";
 
 export function generateMetadata(): Metadata {
   const v = getVariant();
@@ -13,8 +14,9 @@ export function generateMetadata(): Metadata {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="grain min-h-screen">
+      <body className="min-h-screen">
         <div className="ambient" aria-hidden />
+        <CursorBlob />
         {children}
       </body>
     </html>

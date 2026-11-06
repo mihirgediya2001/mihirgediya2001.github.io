@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import type { Variant } from "@/lib/variant";
 import { useShown } from "./useShown";
+import SplitText from "../SplitText";
 
 const ease = [0.2, 0.8, 0.2, 1] as const;
 
@@ -17,14 +18,15 @@ export default function Experience({ v, isActive }: { v: Variant; isActive: bool
       >
         02 / Experience
       </motion.div>
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        animate={show ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{ duration: 0.65, delay: 0.08, ease }}
+      <SplitText
+        text="Where I've shipped."
+        as="h2"
+        by="word"
+        stagger={0.08}
+        delay={0.1}
+        show={show}
         className="display mt-3 text-4xl md:text-6xl"
-      >
-        Where I&apos;ve shipped.
-      </motion.h2>
+      />
 
       <div className="relative mt-12 md:mt-14 pl-8 md:pl-10">
         <div className="tl-line left-[5px] md:left-[7px]" />

@@ -2,12 +2,16 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import type { Variant } from "@/lib/variant";
+import SplitText from "../SplitText";
+import MagneticButton from "../MagneticButton";
 
 const ease = [0.2, 0.8, 0.2, 1] as const;
 
 export default function Intro({ v, isActive = true }: { v: Variant; isActive?: boolean }) {
   const [r, setR] = useState(0);
+  const [mounted, setMounted] = useState(false);
   useEffect(() => {
+    setMounted(true);
     const t = setInterval(() => setR((x) => (x + 1) % v.roles.length), 2600);
     return () => clearInterval(t);
   }, [v.roles.length]);
@@ -26,19 +30,20 @@ export default function Intro({ v, isActive = true }: { v: Variant; isActive?: b
         </span>
       </motion.div>
 
-      <motion.h1
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.08, ease }}
+      <SplitText
+        text={`${v.name}.`}
+        as="h1"
+        by="char"
+        stagger={0.028}
+        delay={0.1}
+        show={mounted}
         className="display mt-8 text-5xl sm:text-7xl md:text-[8.5rem]"
-      >
-        {v.name}.
-      </motion.h1>
+      />
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.25, ease }}
+        transition={{ duration: 0.6, delay: 0.55, ease }}
         className="mt-6 text-2xl sm:text-3xl md:text-4xl font-medium flex flex-wrap items-baseline gap-x-3"
       >
         <span className="muted">I work on</span>
@@ -56,7 +61,7 @@ export default function Intro({ v, isActive = true }: { v: Variant; isActive?: b
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4, ease }}
+        transition={{ duration: 0.6, delay: 0.7, ease }}
         className="mt-8 max-w-2xl text-lg muted leading-relaxed"
       >
         {v.summary}
@@ -65,7 +70,7 @@ export default function Intro({ v, isActive = true }: { v: Variant; isActive?: b
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.55, ease }}
+        transition={{ duration: 0.6, delay: 0.85, ease }}
         className="mt-12 flex flex-wrap items-center gap-8 sm:gap-14"
       >
         {v.stats.map((s) => (
@@ -79,17 +84,17 @@ export default function Intro({ v, isActive = true }: { v: Variant; isActive?: b
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.7, ease }}
+        transition={{ duration: 0.6, delay: 1.0, ease }}
         className="mt-10 flex flex-wrap items-center gap-3"
       >
-        <a href={`mailto:${v.email}`} className="btn-primary">
+        <MagneticButton href={`mailto:${v.email}`} className="btn-primary">
           Get in touch
           <span aria-hidden>→</span>
-        </a>
+        </MagneticButton>
         {v.socials.map((s) => (
-          <a key={s.label} href={s.href} className="btn-ghost">
+          <MagneticButton key={s.label} href={s.href} className="btn-ghost" strength={0.25}>
             {s.label}
-          </a>
+          </MagneticButton>
         ))}
       </motion.div>
     </div>

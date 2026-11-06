@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import type { Variant } from "@/lib/variant";
 import { useShown } from "./useShown";
+import SplitText from "../SplitText";
 
 const ease = [0.2, 0.8, 0.2, 1] as const;
 
@@ -17,14 +18,15 @@ export default function Education({ v, isActive }: { v: Variant; isActive: boole
       >
         03 / Education
       </motion.div>
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        animate={show ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{ duration: 0.65, delay: 0.08, ease }}
+      <SplitText
+        text="Where I learned the fundamentals."
+        as="h2"
+        by="word"
+        stagger={0.07}
+        delay={0.1}
+        show={show}
         className="display mt-3 text-4xl md:text-6xl"
-      >
-        Where I learned the fundamentals.
-      </motion.h2>
+      />
 
       <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5">
         {v.education.map((ed, i) => (
